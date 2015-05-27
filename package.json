@@ -1,0 +1,31 @@
+{
+  "name": "hikers-trail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app/scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimeex3/hikersTrail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aimeex3/hikersTrail/issues"
+  },
+  "dependencies" : {
+    "express": "~4.9.7",
+    "react": "~0.12.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "^0.9.0",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+  },
+  "homepage": "https://github.com/aimeex3/hikersTrail#readme"
+}

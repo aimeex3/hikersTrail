@@ -1,0 +1,6 @@
+#node files
+node_modules*
+npm-debug.log
+
+#osx artifacts
+.DS_Store
