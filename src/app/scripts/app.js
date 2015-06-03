@@ -3,6 +3,6 @@
 var React = require('react');
 var HikersTrailApp = require('./components/HikersTrailApp.react');
 
-React.renderComponent(
+React.render(
     <HikersTrailApp/>, document.getElementById('hikersTrail')
 );

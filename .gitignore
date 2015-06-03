@@ -4,3 +4,6 @@ npm-debug.log
 
 #osx artifacts
 .DS_Store
+
+#IDEA
+.idea*
