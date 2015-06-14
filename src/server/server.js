@@ -1,9 +1,15 @@
 var express = require('express');
 var http = require('http');
+var request = require('request');
 
 var app = express();
 
 var browserify = require('browserify-middleware');
+
+// Everytrail
+var URI = 'https://www.everytrail.com/api/index/search';
+var KEY = '46c8a6e23a9a55d5b69874c7be25fc24';
+var	SECRET = 'b9cac6025efcfba1';
 
 app.use('/scripts/', browserify('src/app/scripts/', {
     transform: [
@@ -14,6 +20,21 @@ app.use('/scripts/', browserify('src/app/scripts/', {
 app.get('/', function(req, res) {
     res.sendFile('index.html', {
         root: 'web'
+    });
+});
+
+app.get('/searchEverytrail', function(req, res) {
+    request.get({
+        uri: URI,
+        'auth': {
+            'user': KEY,
+            'pass': SECRET
+        },
+        qs: {
+            q: req.query
+        }
+    }, function(error, response, body) {
+        res.json(body); // actually getting xml back
     });
 });
 
