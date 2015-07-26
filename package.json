@@ -22,11 +22,12 @@
     "request": "~2.57.0"
   },
   "devDependencies": {
-    "browserify": "^6.0.3",
+    "browserify": "^11.0.0",
     "browserify-middleware": "~5.0.1",
     "nodemon": "^1.2.1",
-    "reactify": "~0.14.0",
-    "uglify-js": "~2.4.15"
+    "reactify": "~1.1.1",
+    "uglify-js": "~2.4.15",
+    "lodash": "^3.10.0"
   },
   "browserify": {
     "transform": [

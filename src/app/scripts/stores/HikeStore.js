@@ -5,12 +5,29 @@ var _ = require('lodash');
 
 var CHANGE_EVENT = 'change';
 
+var _hikes = {};
+
+function add(hikeArray) {
+    _.each(hikeArray, function(hike) {
+        var id = hike.id;
+        _hikes[id] = hike;
+    });
+}
+
 var HikeStore = _.extend({}, EventEmitter.prototype, {
+
+    getAll : function() {
+        return _hikes;
+    },
 
     dispatcherIndex: AppDispatcher.register(function(payload) {
         var action = payload.action;
 
         switch(action.actionType) {
+            case HikersTrailConstants.RECEIVE_DATA:
+                add(action.data);
+                HikeStore.emitChange();
+                break;
             default:
                 return true;
         }

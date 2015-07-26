@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var Header = require('./Header.react.js');
+var Header = require('./Header.react');
+var TripList = require('./TripList.react');
 
 var HikersTrailApp = React.createClass({
     render: function() {
@@ -11,6 +12,7 @@ var HikersTrailApp = React.createClass({
                 <div>
                     Hello this is hikers trail
                 </div>
+                <TripList />
             </div>
         );
     }
